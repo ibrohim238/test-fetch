@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <main class="container sm:mx-auto py-3">
+    <IndexComponent ref="index"></IndexComponent>
+    <CreateComponent/>
+  </main>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import IndexComponent from "../components/comment/IndexComponent";
+import CreateComponent from "@/components/comment/CreateComponent";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    HelloWorld
+    IndexComponent,
+    CreateComponent
   }
 }
 </script>
+
+<style scoped>
+
+</style>
